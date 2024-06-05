@@ -14,7 +14,14 @@
 
 ## Summary
 This program "push_swap" is designed to sort a stack of integers using a set of predefined operations. For comprehensive specifications and restrictions, please refer to the [subject](en.subject.pdf).
-To ease your understanding of this subject, simplicity and brevity were prioritized over efficiency of operations. Nevertheless, at the time of evaluation (Jan 24, 2024), a grade of 96% was reached.
+To provide a clear understanding of the subject, simplicity and brevity were prioritized over operational efficiency. Nevertheless, at the time of evaluation (Jan 24, 2024), a grade of 96% was reached.
+
+For fellow students working on this project, following the steps outlined below might be helpful in developing their own program:
+1. Understand the concept and implementation of linked lists (use [diagrams](https://www.geeksforgeeks.org/rotate-a-linked-list/) for visual reference).
+2. Implement the basic operations: swap, push, and (reverse) rotate.
+3. Apply these operations to create sorting algorithms for small stacks.
+4. Design a sorting algorithm suitable for large stacks.
+5. Handle edge cases and implement robust error handling.
 
 ## Functionality
 The program sorts a stack of integers in ascending order. It is restricted to two stacks, referred to as stack A and B. The stacks are implemented as linked lists; therefore, the terms "top of stack" and "head of list", as well as "bottom of stack" and "tail of list" are used interchangeably.
