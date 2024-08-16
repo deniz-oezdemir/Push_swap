@@ -22,10 +22,17 @@ SRCS	=	main.c pick_sort.c ops_push.c ops_rotate.c sort_small.c\
 			util_atoi.c utils_debug.c utils_free.c utils_check.c
 OBJS	=	$(SRCS:.c=.o)
 
-all: $(NAME)
+all: dependencies $(NAME)
 
-$(LIB):
-	$(MAKE) -C $(LIBDIR)
+dependencies:
+	@if [ ! -f $(LIBDIR)/libft.a ]; then \
+		git submodule update --init --recursive; \
+	fi
+
+	@if [ ! -f $(LIBDIR)/libft.a ]; then \
+		make -s -C $(LIBDIR); \
+	fi
+
 
 $(NAME): $(OBJS) $(LIB)
 	$(CC) -g $(CFLAGS) $^ -o $@
